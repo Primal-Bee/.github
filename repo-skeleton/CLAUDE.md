@@ -19,6 +19,10 @@ runs it, what other Primal Bee repos it depends on or feeds into.}}
 
 Org-wide rules live in [`Primal-Bee/.github/CONTRIBUTING.md`](https://github.com/Primal-Bee/.github/blob/main/CONTRIBUTING.md). Read that once when you join the org; it covers branching, PRs, and the merge policy that applies to every repo here.
 
+## Stay in sync with the org skeleton
+
+Check occasionally whether [`Primal-Bee/.github/repo-skeleton/`](https://github.com/Primal-Bee/.github/tree/main/repo-skeleton) has changed since this repo was bootstrapped. If the upstream skeleton has new conventions, integrate them into this repo's `README.md` / `CLAUDE.md` / `CONTRIBUTING.md` / `TODO.md` / `LEARNINGS.md`.
+
 ## Hard rules (always apply, never override)
 
 <!-- The rules in this section are inviolable for this repo. The first one
