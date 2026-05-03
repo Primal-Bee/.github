@@ -52,7 +52,20 @@ The prefix isn't decoration — it makes the repo discoverable in `gh repo list`
 
 Pick the descriptive part to read well in a sentence: *"the primalbee-website repo"*, *"the primalbee-customer-kb repo"*. If the name needs a glossary entry to make sense, it's the wrong name.
 
-### 3. Copy the scaffold
+### 3. Write a clear "About"
+
+GitHub asks for a description right under the repo name on the New Repository page. **Fill it in.** One short sentence that says what the repo *is* — that's the line people see when scrolling the org repo list trying to find the right one.
+
+Good examples (already in the wild):
+
+- *"Primal Bee brand system (visual + messaging) — distributed as a Claude Code plugin via primalbee-internal-tools"*
+- *"Org-level conventions, PR template, and starter scaffold for new Primal-Bee repos"*
+
+Bad: empty (the default). When most repos in the org have no description, the org page reads as a wall of names with no signal — the eye glazes over and people pick the wrong one.
+
+If you forgot during creation, you can fix it from the repo's main page: click the ⚙ icon next to **About** in the right sidebar, type the description, save. Takes ten seconds.
+
+### 4. Copy the scaffold
 
 This `.github` repo ships a starter folder at [`repo-skeleton/`](https://github.com/Primal-Bee/.github/tree/main/repo-skeleton). Copy its contents into your new repo's root and replace the `{{placeholders}}` (repo name, one-line description). Five tiny files:
 
@@ -64,11 +77,11 @@ This `.github` repo ships a starter folder at [`repo-skeleton/`](https://github.
 
 The placeholders walk you through what each section is for. None of these need to be perfect on day one — they grow with the repo.
 
-### 4. First commit, first PR
+### 5. First commit, first PR
 
 Push the scaffold to `main`. Then branch off, fill in your repo-specific content, open a PR against `main`, merge. From here on every change goes through a PR — see [`CONTRIBUTING.md`](https://github.com/Primal-Bee/.github/blob/main/CONTRIBUTING.md).
 
-### 5. Pre-commit hook (optional but recommended)
+### 6. Pre-commit hook (optional but recommended)
 
 If your repo will ship plugin manifests, schema files, version-locked tooling, or anything else where two files have to agree on the same value, drop a `.githooks/pre-commit` plus a small Python or shell script that checks the invariant. The existing plugin repos (`primalbee-internal-tools`, `primalbee-shopify-blog`, `primalbee-brand-guide`) all have working examples — copy and adapt.
 
