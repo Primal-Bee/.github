@@ -46,7 +46,11 @@ Every repo in this org is **private**. No exceptions without explicit org-owner 
 
 ### 2. Name it clearly
 
-Use kebab-case (lowercase, hyphens). If it's a Primal Bee product surface or something customers might one day see, prefix with `primalbee-` (`primalbee-blog-publisher`, `primalbee-brand-guide`). For internal tooling, bare names are fine (`accounting`, `customer-service-kb`).
+Every new repo in this org is named `primalbee-<descriptive-name>`. Kebab-case (lowercase, hyphens), `primalbee-` prefix, then a short noun phrase that says what the repo *is*. Examples: `primalbee-blog-publisher`, `primalbee-brand-guide`, `primalbee-shopify-blog`, `primalbee-internal-tools`.
+
+The prefix isn't decoration — it makes the repo discoverable in `gh repo list`, in cloned-folder listings, and in any future tooling that filters by org. No bare names, no exceptions for "internal" tools (everything in this org is internal).
+
+Pick the descriptive part to read well in a sentence: *"the primalbee-website repo"*, *"the primalbee-customer-kb repo"*. If the name needs a glossary entry to make sense, it's the wrong name.
 
 ### 3. Copy the scaffold
 
