@@ -14,6 +14,22 @@ If you're reading this, you probably just got added to the org. Here's how to fi
 
 If you're not used to terminals and you just need to get the Primal Bee tools into Claude Code on your computer, follow the install steps in [`primalbee-internal-tools`](https://github.com/Primal-Bee/primalbee-internal-tools#install). Should take about a minute.
 
+## Cloning a repo onto your computer
+
+Easiest path — open Claude Code and ask it in plain English:
+
+> *"Clone primalbee-kb."*
+
+Claude handles auth, drops the repo in `~/projects/<repo-name>/`, and opens it for you. No git commands to remember. Swap `primalbee-kb` for whichever repo you want.
+
+If you'd rather run it yourself in the terminal:
+
+```bash
+gh repo clone Primal-Bee/primalbee-kb ~/projects/primalbee-kb
+```
+
+Needs the [GitHub CLI](https://cli.github.com) — `brew install gh && gh auth login` if you don't have it yet. Then open the folder in your editor and you're set; each repo's `CLAUDE.md` auto-loads when Claude Code opens it.
+
 ## When to make a new repo
 
 **Default to one repo per stack piece.** Each agent, each skill, each distinct surface area gets its own repo — `primalbee-website` and `primalbee-shopify-blog` are two separate sections of the site, so they're two repos. Same logic for skills: a skill that's substantial enough to evolve on its own (its own SKILL.md, its own scripts, its own learnings) belongs in its own repo, not bundled inside another. Small repos are easier to read, easier to grant access to selectively, and let each piece carry its own `CLAUDE.md` / `TODO.md` / `LEARNINGS.md` without competing.
