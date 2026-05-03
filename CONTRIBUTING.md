@@ -6,9 +6,9 @@ If you're brand new, skim this whole page first. Five minutes. Then click into w
 
 ## How changes land
 
-**Every change goes through a pull request.** No direct pushes to `main`, ever — not for typos, not for one-line fixes, not for "just a docs change." Branch off `main`, push, open a PR, merge.
+**Most changes land via a squash-merged PR.** Branch off `main`, push, open a PR, merge.
 
-Why we do this: two passes on every change has caught real bugs, kept docs honest, and made the repos easier to navigate. The five minutes a PR adds up front is the five minutes you'd otherwise spend later debugging or untangling. The friction is the feature.
+Direct push to `main` is allowed for **hotfixes** (production broken, security, deploy blocker) and **trivial edits** (typos, whitespace, comment-only). Everything else is a PR.
 
 ## Branch names
 
