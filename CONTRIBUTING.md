@@ -35,6 +35,7 @@ If you've got something the template doesn't fit, expand a section, don't delete
 - **Squash-and-merge** is the default merge style. Keeps `main`'s history readable.
 - **Repo owners can self-merge their own PRs** once the PR template is filled in, the pre-commit hook has passed locally, and any required CI checks are green. No "stamp from a colleague" required for routine work on your own repo — but use judgment: structural changes still benefit from a second pair of eyes.
 - **Non-owners need an owner's review** before merging.
+- **AI agents don't self-merge.** If you're using Claude Code or another AI agent to make changes on your behalf, the agent **opens the PR and stops there** — it shares the PR URL and waits for you to merge yourself. The self-merge rule above is for humans on their own routine work; an AI doesn't get to decide a change is "routine enough" to ship without your eyes on the GitHub diff. Tell the agent "merge it" explicitly when you're ready, and only for the specific PR you mean.
 
 If you're not sure whether you're an "owner" of a repo, ask. Usually it's whoever maintains it day to day.
 
