@@ -14,6 +14,12 @@ If you're reading this, you probably just got added to the org. Here's how to fi
 
 If you're not used to terminals and you just need to get the Primal Bee tools into Claude Code on your computer, follow the install steps in [`primalbee-internal-tools`](https://github.com/Primal-Bee/primalbee-internal-tools#install). Should take about a minute.
 
+## When to make a new repo
+
+**Default to one repo per stack piece.** Each agent, each skill, each distinct surface area gets its own repo — `primalbee-website` and `primalbee-shopify-blog` are two separate sections of the site, so they're two repos. Same logic for skills: a skill that's substantial enough to evolve on its own (its own SKILL.md, its own scripts, its own learnings) belongs in its own repo, not bundled inside another. Small repos are easier to read, easier to grant access to selectively, and let each piece carry its own `CLAUDE.md` / `TODO.md` / `LEARNINGS.md` without competing.
+
+If you're unsure, err toward a new repo. Splitting later is harder than starting clean.
+
 ## Starting a new repo here
 
 When you spin up a new repo in this org, follow this walkthrough. It keeps things consistent across the org so the next person to land in your repo recognises the layout.
