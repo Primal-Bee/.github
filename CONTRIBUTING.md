@@ -6,7 +6,7 @@ If you're brand new, skim this whole page first. Five minutes. Then click into w
 
 ## How changes land
 
-**Most changes land via a squash-merged PR.** Branch off `main`, push, open a PR, merge.
+**Most changes land via a squash-merged PR.** Branch off `main`, commit as many times as you want, push, decide when it's time, open a PR, someone merges.
 
 Direct push to `main` is allowed for **hotfixes** (production broken, security, deploy blocker) and **trivial edits** (typos, whitespace, comment-only). Everything else is a PR.
 
