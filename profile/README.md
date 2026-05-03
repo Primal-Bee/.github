@@ -1,0 +1,53 @@
+# Primal Bee
+
+Welcome. We build the thermodynamically-engineered Primal Bee hive at [primalbee.com](https://primalbee.com), plus the internal tools and content we use to run the operation. This GitHub org is where all of that lives.
+
+If you're reading this, you probably just got added to the org. Here's how to find your feet.
+
+## If you're new here
+
+1. **Start with [`CONTRIBUTING.md`](https://github.com/Primal-Bee/.github/blob/main/CONTRIBUTING.md)** in this repo. It's the few rules that apply to every Primal Bee repo. About five minutes of reading.
+2. **Then click into whichever repo you'll be working in** and open its `CLAUDE.md`. Each repo has its own quirks, hard rules, and gotchas — they're all in there. If you use Claude Code, it auto-loads CLAUDE.md when you open the repo, so you don't have to remember to read it.
+3. **Stuck?** Ask. Better than reading docs in circles.
+
+## Setting up Claude Code (non-technical)
+
+If you're not used to terminals and you just need to get the Primal Bee tools into Claude Code on your computer, follow the install steps in [`primalbee-internal-tools`](https://github.com/Primal-Bee/primalbee-internal-tools#install). Should take about a minute.
+
+## Starting a new repo here
+
+When you spin up a new repo in this org, follow this walkthrough. It keeps things consistent across the org so the next person to land in your repo recognises the layout.
+
+### 1. Make it private
+
+Every repo in this org is **private**. No exceptions without explicit org-owner approval — we don't ship anything customer-facing through GitHub directly. When you click *New repository*, set visibility to Private.
+
+### 2. Name it clearly
+
+Use kebab-case (lowercase, hyphens). If it's a Primal Bee product surface or something customers might one day see, prefix with `primalbee-` (`primalbee-blog-publisher`, `primalbee-brand-guide`). For internal tooling, bare names are fine (`accounting`, `customer-service-kb`).
+
+### 3. Copy the scaffold
+
+This `.github` repo ships a starter folder at [`repo-skeleton/`](https://github.com/Primal-Bee/.github/tree/main/repo-skeleton). Copy its contents into your new repo's root and replace the `{{placeholders}}` (repo name, one-line description). Five tiny files:
+
+- `README.md` — what the repo is, in two or three lines.
+- `CLAUDE.md` — the project context Claude Code auto-loads. Hard rules, dispatcher to the other docs.
+- `CONTRIBUTING.md` — the repo-specific layer. Top-line points at the org-wide rules; the rest is yours.
+- `TODO.md` — pending work, deferred decisions, done log.
+- `LEARNINGS.md` — non-obvious gotchas you've discovered.
+
+The placeholders walk you through what each section is for. None of these need to be perfect on day one — they grow with the repo.
+
+### 4. First commit, first PR
+
+Push the scaffold to `main`. Then branch off, fill in your repo-specific content, open a PR against `main`, merge. From here on every change goes through a PR — see [`CONTRIBUTING.md`](https://github.com/Primal-Bee/.github/blob/main/CONTRIBUTING.md).
+
+### 5. Pre-commit hook (optional but recommended)
+
+If your repo will ship plugin manifests, schema files, version-locked tooling, or anything else where two files have to agree on the same value, drop a `.githooks/pre-commit` plus a small Python or shell script that checks the invariant. The existing plugin repos (`primalbee-internal-tools`, `primalbee-shopify-blog`, `primalbee-brand-guide`) all have working examples — copy and adapt.
+
+## Help
+
+Ask the engineering channel. New to the team? Ask whoever onboarded you — that's faster than figuring it out alone.
+
+All new repos are private. So is anything sensitive that ends up in them.
