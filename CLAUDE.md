@@ -8,11 +8,13 @@ The org-level `.github` repo for [Primal-Bee](https://github.com/Primal-Bee). It
 
 The repo is **public**. Anything committed here is visible at github.com/Primal-Bee/.github. It does not contain plugin or product source code; each Primal Bee plugin/product (e.g. `primalbee-shopify-blog`, `primalbee-brand-guide`, `primalbee-internal-tools`) lives in its own repo.
 
-## Companion files (read as the task warrants)
+## Companion files
+
+Read the companion files below before any task that touches the area they cover (`CONTRIBUTING.md` for any change; `TODO.md` if continuing in-flight work; `LEARNINGS.md` before editing areas with prior gotchas).
 
 - **`CONTRIBUTING.md`** — note: the root `CONTRIBUTING.md` here is the **org-wide** document GitHub serves as the fallback to every other Primal-Bee repo. There is no separate per-repo `CONTRIBUTING.md`; the org-wide one covers what applies here too.
-- **`TODO.md`** — pending work, deferred decisions, done log. **Gitignored — local-only by design.** Won't exist in a fresh clone; create from `repo-skeleton/TODO.md` if you need it.
-- **`LEARNINGS.md`** — non-obvious gotchas. **Gitignored — local-only by design.** Same as `TODO.md`: not present in a fresh clone. The intent is to avoid overexposing internal scheduling and gotchas on a public repo.
+- **`TODO.md`** — pending work, deferred decisions, done log. **Gitignored — local-only by design.** Won't exist in a fresh clone; create from `repo-skeleton/TODO.md` when starting non-trivial work in a fresh clone, and keep it updated as work progresses.
+- **`LEARNINGS.md`** — non-obvious gotchas. **Gitignored — local-only by design.** Same as `TODO.md`: not present in a fresh clone. The intent is to avoid overexposing internal scheduling and gotchas on a public repo. When you hit a non-obvious gotcha worth saving, append it to `LEARNINGS.md` before moving on.
 
 Org-wide rules live in this repo's own [`CONTRIBUTING.md`](./CONTRIBUTING.md). Read it once; it covers branching, PRs, and the merge policy that applies to every repo here.
 
@@ -24,6 +26,10 @@ Org-wide rules live in this repo's own [`CONTRIBUTING.md`](./CONTRIBUTING.md). R
 
 3. **Don't commit `TODO.md` or `LEARNINGS.md`.** They're gitignored on purpose for this public repo. If you need to track something visible to the org, put it in an issue, not these files.
 
+4. **When creating a new repo (any org), copy `repo-skeleton/` before adding project content.** Land the skeleton via PR — the no-direct-push-to-main rule (#1) applies from commit one.
+
+5. **Ask before opening a PR.** Don't open one autonomously, even if you think the work is done. Plan approval doesn't imply PR approval — ask again when the branch is ready to push.
+
 ## Working agreements
 
 How AI agents (Claude Code, etc.) and humans should collaborate in this repo:
@@ -33,8 +39,8 @@ How AI agents (Claude Code, etc.) and humans should collaborate in this repo:
 - **Make minimal changes.** Don't refactor unrelated code. Stay in the lane the task asked for; flag anything else as a follow-up rather than folding it in.
 - **Run tests after every change, fix failures before moving on.** Don't pile change on top of a broken state.
 - **Atomic commits.** For documentation changes (`.md`, `.txt`, `.csv`, etc.) — one commit per file. For code changes that span multiple files but represent one logical change — one commit per logical change. Either way, no giant catch-all commits.
-- **PRs are batched commits, reviewed as a whole.** A PR collects related work into a reviewable unit. **Ask before opening a PR** — don't open one autonomously, even if you think the work is done.
-- **When unsure between two approaches, explain both and let the human choose.** Don't silently pick. Lay out the tradeoffs.
+- **PRs are batched commits, reviewed as a whole.** A PR collects related work into a reviewable unit. (Asking before opening a PR is now Hard rule #5.)
+- **Never silently choose between two viable approaches.** Lay out the tradeoffs and wait for the human to pick.
 
 ## Quick orientation
 
@@ -43,7 +49,7 @@ How AI agents (Claude Code, etc.) and humans should collaborate in this repo:
 | `profile/README.md` | Public landing page rendered at github.com/Primal-Bee. |
 | `CONTRIBUTING.md` | Org-wide rules; auto-served as the fallback `CONTRIBUTING.md` to every repo in the org. |
 | `PULL_REQUEST_TEMPLATE.md` | Auto-applied to every PR opened in any Primal-Bee repo. |
-| `repo-skeleton/` | Starter docs (`README`, `CLAUDE`, `CONTRIBUTING`, `TODO`, `LEARNINGS`) plus `LICENSE-PROPRIETARY`, hand-copied into new repos. |
+| `repo-skeleton/` | Starter docs (`README`, `CLAUDE`, `CONTRIBUTING`, `TODO`, `LEARNINGS`) plus `LICENSE-PROPRIETARY`, copied into every new repo per Hard rule #4. |
 | `LICENSE` | All rights reserved. Repo is public-visible for transparency; not open source. |
 
 ## Need help?
