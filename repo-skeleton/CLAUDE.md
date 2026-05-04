@@ -33,6 +33,18 @@ Org-wide rules live in [`Primal-Bee/.github/CONTRIBUTING.md`](https://github.com
 
 {{Add repo-specific hard rules here as they emerge.}}
 
+## Git commit rules
+
+When committing changes, create **separate commits per file**. Do NOT bundle multiple file changes into a single commit. Each file gets its own commit with a descriptive message specific to that file's changes.
+
+For example, if `README.md`, `best-practice/claude-subagents.md`, and a skill file all changed:
+
+1. `git add README.md` → commit with a README-specific message
+2. `git add best-practice/claude-subagents.md` → commit with a subagents-doc-specific message
+3. `git add .claude/skills/weather-fetcher/SKILL.md` → commit with a skill-specific message
+
+This keeps git history clean and makes individual changes easy to review, revert, or cherry-pick.
+
 ## Quick orientation
 
 <!-- A table mapping paths to what they are. Useful for fast navigation
