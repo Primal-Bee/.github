@@ -43,8 +43,8 @@ This keeps git history clean and makes individual changes easy to review, revert
 | `profile/README.md` | Public landing page rendered at github.com/Primal-Bee. |
 | `CONTRIBUTING.md` | Org-wide rules; auto-served as the fallback `CONTRIBUTING.md` to every repo in the org. |
 | `PULL_REQUEST_TEMPLATE.md` | Auto-applied to every PR opened in any Primal-Bee repo. |
-| `repo-skeleton/` | Starter docs (`README`, `CLAUDE`, `CONTRIBUTING`, `TODO`, `LEARNINGS`) plus `LICENSE-MIT`, hand-copied into new repos. |
-| `LICENSE` | MIT, required because this repo is public. |
+| `repo-skeleton/` | Starter docs (`README`, `CLAUDE`, `CONTRIBUTING`, `TODO`, `LEARNINGS`) plus `LICENSE-PROPRIETARY`, hand-copied into new repos. |
+| `LICENSE` | All rights reserved. Repo is public-visible for transparency; not open source. |
 
 ## Need help?
 
