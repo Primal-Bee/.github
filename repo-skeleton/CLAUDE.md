@@ -33,17 +33,17 @@ Org-wide rules live in [`Primal-Bee/.github/CONTRIBUTING.md`](https://github.com
 
 {{Add repo-specific hard rules here as they emerge.}}
 
-## Git commit rules
+## Working agreements
 
-When committing changes, create **separate commits per file**. Do NOT bundle multiple file changes into a single commit. Each file gets its own commit with a descriptive message specific to that file's changes.
+How AI agents (Claude Code, etc.) and humans should collaborate in this repo:
 
-For example, if `README.md`, `best-practice/claude-subagents.md`, and a skill file all changed:
-
-1. `git add README.md` → commit with a README-specific message
-2. `git add best-practice/claude-subagents.md` → commit with a subagents-doc-specific message
-3. `git add .claude/skills/weather-fetcher/SKILL.md` → commit with a skill-specific message
-
-This keeps git history clean and makes individual changes easy to review, revert, or cherry-pick.
+- **Ask clarifying questions before complex tasks.** If the task isn't trivial, surface ambiguities before starting. Five "obvious" questions answered beats one wrong assumption landing in a PR.
+- **Use plan mode before complex tasks.** For anything beyond a one-line edit, write the plan first, get alignment, then execute.
+- **Make minimal changes.** Don't refactor unrelated code. Stay in the lane the task asked for; flag anything else as a follow-up rather than folding it in.
+- **Run tests after every change, fix failures before moving on.** Don't pile change on top of a broken state.
+- **Atomic commits.** For documentation changes (`.md`, `.txt`, `.csv`, etc.) — one commit per file. For code changes that span multiple files but represent one logical change — one commit per logical change. Either way, no giant catch-all commits.
+- **PRs are batched commits, reviewed as a whole.** A PR collects related work into a reviewable unit. **Ask before opening a PR** — don't open one autonomously, even if you think the work is done.
+- **When unsure between two approaches, explain both and let the human choose.** Don't silently pick. Lay out the tradeoffs.
 
 ## Quick orientation
 
